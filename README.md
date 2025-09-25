@@ -50,3 +50,28 @@ Explique como os bounded contexts vão se comunicar. Use os padrões de comunica
 | Contexto de Diagnóstico | Contexto de Contas e Planos | API | Verificar limite de diagnósticos do plano do usuário. |
 
 ---
+
+## 6. Definição da Linguagem Ubíqua
+Liste os termos principais da Linguagem Ubíqua do projeto. Explique brevemente cada termo.
+
+| **Termo**                    | **Descrição**                                                                                   |
+|------------------------------|-----------------------------------------------------------------------------------------------|
+| Ex.: Consulta                | Sessão médica entre paciente e médico.                                                       |
+| Ex.: Paciente                | Usuário que agenda e realiza consultas.                                                      |
+| Ex.: Receita                 | Prescrição médica gerada durante a consulta.                                                 |
+
+---
+
+## 7. Estratégia de Desenvolvimento
+Para cada tipo de subdomínio, explique a abordagem para implementação:
+- **Core Domain:** Desenvolver internamente com foco total.
+- **Supporting Subdomain:** Desenvolver internamente ou parcialmente terceirizar.
+- **Generic Subdomain:** Usar ferramentas ou serviços de mercado.
+
+| **Subdomínio**              | **Estratégia**                         | **Ferramentas ou Serviços (se aplicável)** |
+|-----------------------------|---------------------------------------|-------------------------------------------|
+| Gestão de Consultas         | Desenvolvimento interno               |                                           |
+| Cadastro de Usuários        | Interno com uso de Auth0 para login   | Auth0                                     |
+| Pagamentos                  | Terceirizar usando API Stripe         | Stripe                                    |
+
+---
